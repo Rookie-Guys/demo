@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const target = {
+        field1: 1,
+        field2: undefined,
+        field3: { child: "child" },
+        field4: [2, 4, 8],
+      };
+      target.child = target;
+      console.log(target, target.child);
+
+      let obj = {
+        age: "123",
+        name: "jack",
+      };
+
+      const { age, name } = obj;
+      // console.log("1111", age, name);
+      var str = "111";
+      var str1 = "";
+      console.log("object", !str, !str1);
+    </script>
+  </body>
+</html>

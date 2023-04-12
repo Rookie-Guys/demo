@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: flex;
+      }
+      .first {
+        width: 100px;
+        height: 100px;
+        background-color: #f66;
+      }
+      .childrenOne {
+        width: 100px;
+        height: 50px;
+        background-color: skyblue;
+      }
+      .childrenTwo {
+        width: 100px;
+        height: 50px;
+        background-color: orange;
+      }
+      .last {
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+      }
+      .layout div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid orange;
+        background-color: pink;
+        margin: 10px;
+      }
+      .layout div:last-child {
+        font-size: 30px;
+      }
+      .imgBox {
+        width: 600px;
+        height: 600px;
+        background-color: #f66;
+        display: flex;
+      }
+      .imgItem {
+        width: 200px;
+        height: 300px;
+        background-color: orange;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="first">div-1</div>
+      <div class="second">
+        <div class="childrenOne">div-2</div>
+        <div class="childrenTwo">div-3</div>
+      </div>
+      <div class="last">div-4</div>
+      <div class="imgBox">
+        <div class="imgItem">div-5</div>
+        <div class="imgItem">div-6</div>
+        <div class="imgItem">div-7</div>
+      </div>
+    </div>
+    <div class="layout">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <script>
+      let startStr = "2012-12-25T00:00:00";
+      let endStr = "2022-12-25T00:00:00";
+      let startArr = startStr.split("T")[0].split("-");
+      let endArr = endStr.split("T")[0].split("-");
+
+      let startDate = {
+        $y: startArr[0],
+        $M: startArr[1],
+        $D: startArr[2],
+      };
+
+      let endDate = {
+        $y: endArr[0],
+        $M: endArr[1],
+        $D: endArr[2],
+      };
+
+      let arr = [];
+      arr.push(startDate);
+      arr.push(endDate);
+      console.log("日历", arr);
+    </script>
+  </body>
+</html>
