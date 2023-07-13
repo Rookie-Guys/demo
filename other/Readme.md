@@ -27,7 +27,7 @@
 ### git commit
 
 > git add .
-> git commit -m 'to: AOneCode xxx : message xxx'
+> git commit -m 'to: AOneCode xxx : message xxx' --no-verify
 > git push
 
 ## nginx
